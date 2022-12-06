@@ -13,6 +13,9 @@ import { SetGoals } from "./Hooks/useState/SetGoals";
 import { AllGoals } from "./Hooks/useState/AllGoals";
 import { TitleToggle } from "./Hooks/useEffectHook/TitleToggle";
 import { UseReducerEx } from "./Hooks/useReducerHook/UseReducerEx";
+import { UseRefEx } from "./Hooks/useRefEx/UseRefEx";
+import { Counter } from "./Hooks/customHooks/Counter";
+import { UseRefExTwo } from "./Hooks/useRefEx/UseRefExTwo";
 
 function App() {
   const { theme, toggleFunction } = UseTheme();
@@ -40,7 +43,10 @@ function App() {
       <UseStHook />
       <UseStPrev />  */}
       {/* <TitleToggle /> */}
-      <UseReducerEx />
+      {/* <UseReducerEx /> */}
+      {/* <UseRefEx /> */}
+      {/* <Counter /> */}
+      <UseRefExTwo />
     </div>
   );
 }
