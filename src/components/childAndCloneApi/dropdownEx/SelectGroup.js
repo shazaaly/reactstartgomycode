@@ -7,14 +7,14 @@ export const SelectGroup = ({ onChange, selected, children }) => {
       selected: child.props.value === selected,
     });
   });
-  
-  return <div>{options}</div>;
+
+  return <select>{options}</select>;
 };
 
 export const SelectOption = ({ children, value }) => {
   return (
-    <div>
+    <>
       <option value={value}>{children}</option>
-    </div>
+    </>
   );
 };

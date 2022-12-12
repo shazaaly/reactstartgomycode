@@ -26,6 +26,10 @@ import {
   SelectGroup,
   SelectOption,
 } from "./components/childAndCloneApi/dropdownEx/SelectGroup";
+import { CoursesList } from "./components/spreadOperators/CoursesList";
+import { LoginButton } from "./components/spreadOperators/login_signUp_Button/Button";
+import { EnhancedCursorTracker } from "./components/HOC/CursorTracker";
+import { CursorTrackerRendered } from "./components/HOC/RenderProp/CursorTrackerRenderPropUse";
 
 function App() {
   const [selected, setSelected] = useState("");
@@ -75,7 +79,12 @@ function App() {
       <br /> <hr />
       <br /> <hr />
       <br />
-      <SelectGroup name="pets" id="pet-select" onChange={setSelected} selected={selected}>
+      <SelectGroup
+        name="pets"
+        id="pet-select"
+        onChange={setSelected}
+        selected={selected}
+      >
         <SelectOption value="">--Please choose an option--</SelectOption>
         <SelectOption value="dog">Dog</SelectOption>
         <SelectOption value="cat">Cat</SelectOption>
@@ -84,6 +93,10 @@ function App() {
         <SelectOption value="spider">Spider</SelectOption>
         <SelectOption value="goldfish">Goldfish</SelectOption>
       </SelectGroup>
+      <CoursesList />
+      <LoginButton title='login' />
+      {/* <EnhancedCursorTracker /> */}
+      <CursorTrackerRendered/>
     </div>
   );
 }
